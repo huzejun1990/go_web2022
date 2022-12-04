@@ -25,8 +25,8 @@ func m1(c *gin.Context) {
 	fmt.Println("m1 in ...")
 	// 计时
 	start := time.Now()
-	go funcxx(c.Copy()) // 在funcxx中，只能使用c的拷贝
-	c.Next()            //调用后续的处理函数
+	//go funcxx(c.Copy()) // 在funcxx中，只能使用c的拷贝
+	c.Next() //调用后续的处理函数
 	//c.Abort()	//阻止调用后续的处理函数
 	cost := time.Since(start)
 	fmt.Printf("cost:%v\n", cost)
