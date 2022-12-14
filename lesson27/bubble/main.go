@@ -19,5 +19,6 @@ func main() {
 	dao.DB.AutoMigrate(&models.Todo{}) // todos
 
 	r := routers.SetupRouter()
+
 	r.Run()
 }
